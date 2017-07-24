@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="17008000">
+<Project Type="Project" LVVersion="14008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Property Name="SMProvider.SMVersion" Type="Int">201310</Property>
@@ -22,10 +22,10 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Central Error Handler configuration.lvclass" Type="LVClass" URL="../module/configuration/Central Error Handler configuration.lvclass"/>
-		<Item Name="Central Error Handler editor node.lvclass" Type="LVClass" URL="../editor node/Central Error Handler editor node.lvclass"/>
-		<Item Name="Central Error Handler runtime.lvclass" Type="LVClass" URL="../module/execution/Central Error Handler runtime.lvclass"/>
-		<Item Name="Central Error Handler tests.lvlib" Type="Library" URL="../Test/Central Error Handler tests.lvlib"/>
+		<Item Name="CentralErrorHandler configuration.lvclass" Type="LVClass" URL="../module/configuration/CentralErrorHandler configuration.lvclass"/>
+		<Item Name="CentralErrorHandler editor node.lvclass" Type="LVClass" URL="../editor node/CentralErrorHandler editor node.lvclass"/>
+		<Item Name="CentralErrorHandler runtime.lvclass" Type="LVClass" URL="../module/execution/CentralErrorHandler runtime.lvclass"/>
+		<Item Name="CentralErrorHandlerDev tests.lvlib" Type="Library" URL="../Test/CentralErrorHandlerDev tests.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="AMC.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/AMC/AMC.lvlib"/>
@@ -133,18 +133,19 @@
 				<Item Name="Table Manager.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/DCAF/Tag Editor Core/Table API/Table Manager.lvlib"/>
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
+				<Item Name="Mapping.ctl" Type="VI" URL="/&lt;vilib&gt;/NI/DCAF/Tag Editor Core/Configuration Editor/subVIs/Mapping.ctl"/>
 				<Item Name="panelstate.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/panelstate.ctl"/>
 				<Item Name="sizeaction.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/sizeaction.ctl"/>
-				<Item Name="SEH Init.vi" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/SEH Init.vi"/>
-				<Item Name="SEH Notification Info.ctl" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Controls/Shared/SEH Notification Info.ctl"/>
-				<Item Name="SEH Error Notification Command.ctl" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Controls/Shared/SEH Error Notification Command.ctl"/>
-				<Item Name="SEH Error Notification Config.ctl" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Controls/Shared/SEH Error Notification Config.ctl"/>
-				<Item Name="SEH Transmit Error Function.ctl" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Controls/Shared/SEH Transmit Error Function.ctl"/>
-				<Item Name="SEH Error Notification.vi" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Support VIs/SEH/SEH Error Notification.vi"/>
-				<Item Name="SEH Error Notification Data.ctl" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Controls/SEH/SEH Error Notification Data.ctl"/>
-				<Item Name="SEH Get Next Error.vi" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/SEH Get Next Error.vi"/>
-				<Item Name="Classify Error.vi" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/Classify Error.vi"/>
-				<Item Name="De-Classify Error.vi" Type="VI" URL="/&lt;vilib&gt;/NI/_SEH/De-Classify Error.vi"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="SEH Transmit Error Function.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/Shared/SEH Transmit Error Function.ctl"/>
+				<Item Name="SEH Error Notification Data.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/SEH/SEH Error Notification Data.ctl"/>
+				<Item Name="SEH Error Notification Config.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/Shared/SEH Error Notification Config.ctl"/>
+				<Item Name="SEH Error Notification Command.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/Shared/SEH Error Notification Command.ctl"/>
+				<Item Name="SEH Error Notification.vi" Type="VI" URL="/&lt;userlib&gt;/_SEH/Support VIs/SEH/SEH Error Notification.vi"/>
+				<Item Name="SEH Notification Info.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/Shared/SEH Notification Info.ctl"/>
+				<Item Name="SEH Get Next Error.vi" Type="VI" URL="/&lt;userlib&gt;/_SEH/SEH Get Next Error.vi"/>
+				<Item Name="SEH Init.vi" Type="VI" URL="/&lt;userlib&gt;/_SEH/SEH Init.vi"/>
 			</Item>
 			<Item Name="System.Drawing" Type="Document" URL="System.Drawing">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -152,6 +153,7 @@
 			<Item Name="System.Windows.Forms" Type="Document" URL="System.Windows.Forms">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="CentralErrorHandlerDev configuration.lvclass" Type="LVClass" URL="../module/configuration/CentralErrorHandlerDev configuration.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
